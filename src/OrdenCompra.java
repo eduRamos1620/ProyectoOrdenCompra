@@ -45,4 +45,8 @@ public class OrdenCompra {
     public Producto[] getProductos() {
         return productos;
     }
+
+    public void addProducto(Producto producto){
+
+    }
 }
