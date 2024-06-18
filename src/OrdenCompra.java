@@ -8,6 +8,7 @@ public class OrdenCompra {
     private Producto[] productos;
 
     private static int ultimoId;
+    public int idProducto;
 
     public OrdenCompra(String descripcion){
         this.descripcion = descripcion;
@@ -44,10 +45,9 @@ public class OrdenCompra {
     }
 
     public void addProducto(Producto producto){
-        for (int i=0; i< productos.length; i++){
-            this.productos[i] = producto;
-        }
-
+       if (idProducto<this.productos.length){
+           this.productos[idProducto++] = producto;
+       }
     }
 
     public int getSumaTotal(){

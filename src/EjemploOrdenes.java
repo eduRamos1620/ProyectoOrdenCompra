@@ -36,7 +36,15 @@ public class EjemploOrdenes {
             System.out.println("Cliente: " + orden.getCliente());
             System.out.println("Descripcion: " + orden.getDescripcion());
             System.out.println("Fecha de compra: " + orden.getFecha());
+
+            int i=1;
+            System.out.println("ID\t" + "Fabricante\t" + "Nombre\t" + "Precio");
+            for(Producto prod: orden.getProductos()){
+                System.out.println(i + "\t" + prod.getFabricante() + "\t" + prod.getNombre() + "\t" + prod.getPrecio());
+                i++;
+            }
             System.out.println("Total: " + orden.getSumaTotal());
+            System.out.println("\n");
         }
     }
 }
