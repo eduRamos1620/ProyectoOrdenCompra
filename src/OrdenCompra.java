@@ -47,6 +47,9 @@ public class OrdenCompra {
     }
 
     public void addProducto(Producto producto){
+        for (int i=0; i< productos.length; i++){
+            this.productos[i] = producto;
+        }
 
     }
 }
