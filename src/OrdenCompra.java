@@ -52,4 +52,13 @@ public class OrdenCompra {
         }
 
     }
+
+    public int getSumaTotal(){
+        int sumatoria =0;
+        for (Producto p: productos){
+            sumatoria += p.getPrecio();
+        }
+
+        return sumatoria;
+    }
 }
