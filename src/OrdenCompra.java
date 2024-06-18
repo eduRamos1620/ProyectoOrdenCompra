@@ -9,13 +9,10 @@ public class OrdenCompra {
 
     private static int ultimoId;
 
-    public OrdenCompra(){
+    public OrdenCompra(String descripcion){
+        this.descripcion = descripcion;
         this.id = ++ultimoId;
         this.productos = new Producto[4];
-    }
-
-    public OrdenCompra(String descripcion) {
-        this.descripcion = descripcion;
     }
 
     public int getId() {

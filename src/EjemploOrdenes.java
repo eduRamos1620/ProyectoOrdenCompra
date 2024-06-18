@@ -1,10 +1,12 @@
+import com.sun.security.jgss.GSSUtil;
+
 import java.util.Date;
 
 public class EjemploOrdenes {
     public static void main(String[] args) {
-        OrdenCompra compra1 = new OrdenCompra();
-        OrdenCompra compra2 = new OrdenCompra();
-        OrdenCompra compra3 = new OrdenCompra();
+        OrdenCompra compra1 = new OrdenCompra("Compras de bebé");
+        OrdenCompra compra2 = new OrdenCompra("Compras de papá");
+        OrdenCompra compra3 = new OrdenCompra("Compras de mamá");
 
         compra1.setFecha(new Date());
         compra1.setCliente(new Cliente("Charles", "Ramos"));
@@ -27,6 +29,14 @@ public class EjemploOrdenes {
         compra3.addProducto(new Producto("Burget King", "Papas", 60));
         compra3.addProducto(new Producto("Sams", "Hot Dog", 49));
 
+        OrdenCompra[] compras = {compra1, compra2, compra3};
 
+        for (OrdenCompra orden: compras){
+            System.out.println("Folio: " + orden.getId());
+            System.out.println("Cliente: " + orden.getCliente());
+            System.out.println("Descripcion: " + orden.getDescripcion());
+            System.out.println("Fecha de compra: " + orden.getFecha());
+            System.out.println("Total: " + orden.getSumaTotal());
+        }
     }
 }
